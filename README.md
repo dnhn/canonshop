@@ -1,0 +1,2 @@
+# canonshop
+Example AngularJS application

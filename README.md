@@ -1,2 +1,2 @@
-# canonshop
+# Canon Shop
 Example AngularJS application

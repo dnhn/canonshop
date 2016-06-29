@@ -1,0 +1,15 @@
+{
+  "name": "canonshop",
+  "version": "1.0.0",
+  "description": "Canon Shop",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhantdn/canonshop.git"
+  },
+  "author": "Nhan To-Doan",
+  "license": "Unlicense",
+  "bugs": {"url": "https://github.com/nhantdn/canonshop/issues"},
+  "homepage": "https://github.com/nhantdn/canonshop/README.md"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "canonshop",
+  "description": "Canon Shop",
+  "main": "index.js",
+  "authors": ["Nhan To-Doan"],
+  "license": "Unlicense",
+  "homepage": "https://github.com/nhantdn/canonshop",
+  "private": true,
+  "ignore": ["node_modules", "bower_components", "test", "tests"]
+}

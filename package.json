@@ -2,7 +2,7 @@
   "name": "canonshop",
   "version": "1.0.0",
   "description": "Canon Shop",
-  "main": "index.js",
+  "main": "app/js/app.js",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -10,6 +10,14 @@
   },
   "author": "Nhan To-Doan",
   "license": "Unlicense",
-  "bugs": {"url": "https://github.com/nhantdn/canonshop/issues"},
-  "homepage": "https://github.com/nhantdn/canonshop/README.md"
+  "bugs": { "url": "https://github.com/nhantdn/canonshop/issues" },
+  "homepage": "https://github.com/nhantdn/canonshop/README.md",
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7",
+    "bootstrap-sass": "^3.3.6",
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "jquery": "^2.2.4"
+  }
 }

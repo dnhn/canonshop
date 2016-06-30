@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="canonshopApp" lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<title>Canon Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<nav>
+  <ul class="nav nav-pills">
+    <li><a ng-href="#/">Home</a></li>
+    <li><a ng-href="#/about">About</a></li>
+    <li><a ng-href="#/contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="container container-root" ng-view></main>
+
+<script src="scripts/vendor.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+body {
+  background-color: #eef;
+  font-size: 16px;
+}
+
+nav {
+
+}
+.dropdown:hover {
+  & > a {
+    background-image: linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFDBDBDB', endColorstr='#FFE2E2E2', GradientType=0);
+    box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+  }
+  & > .dropdown-menu {
+    display: block;
+  }
+}
+
+main {
+  &.container {
+    height: 100vh;
+    padding: 2em;
+    background-color: white;
+  }
+}

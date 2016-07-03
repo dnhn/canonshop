@@ -6,11 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <!-- <base href="/"> -->
 
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet">
 <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -36,12 +37,20 @@
         </li>
         <li><a href="#/contact">Contact</a></li>
       </ul>
+      <p class="navbar-text navbar-right">Made by <a href="http://code.nhan.me" class="navbar-link" target="_blank">Nhan To-Doan</a></p>
     </div>
   </div>
 </nav>
 
+<header>
+  <div class="carousel"></div>
+</header>
 
 <main class="container container-root" ng-view></main>
+
+<footer>
+
+</footer>
 
 <script src="scripts/vendor.js"></script>
 <script src="scripts/main.js"></script>

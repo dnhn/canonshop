@@ -1,4 +1,4 @@
-# Canon Shop
+# Canon Shop [![Build Status](https://travis-ci.org/nhantdn/canonshop.svg)](https://travis-ci.org/nhantdn/canonshop)
 An Example AngularJS application
 
 ## Technologies used

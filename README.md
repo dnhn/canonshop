@@ -6,6 +6,7 @@ An Example AngularJS application
 ### Package manager
 [Node.js Package Manager](https://www.npmjs.com)
 
+#### Libraries
 Library | |
 --- | ---
 [AngularJS](https://www.npmjs.com/package/angular) | 1.5.7
@@ -13,6 +14,7 @@ Library | |
 [Bootstrap for Sass](https://www.npmjs.com/package/bootstrap-sass) | 3.3.6
 [jQuery](https://www.npmjs.com/package/jquery) | 2.2.4
 
+#### Tools
 Tool | |
 --- | ---
 [gulp.js](https://www.npmjs.com/package/gulp) | 3.9.1
@@ -29,6 +31,7 @@ Tool | |
 [vinyl-buffer](https://www.npmjs.com/package/vinyl-buffer) | 1.0.0
 [vinyl-source-stream](https://www.npmjs.com/package/vinyl-source-stream) | 1.1.0
 
+## Gulp tasks
 Gulp task | |
 --- | ---
 `styles`| Build stylesheets

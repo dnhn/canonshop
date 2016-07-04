@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -37,15 +37,29 @@
         </li>
         <li><a href="#/contact">Contact</a></li>
       </ul>
-      <p class="navbar-text navbar-right">Made by <a href="http://code.nhan.me" class="navbar-link" target="_blank">Nhan To-Doan</a></p>
     </div>
   </div>
 </nav>
 
-<main class="container container-root" ng-view></main>
+<main class="container container-root" ng-view autoscroll></main>
 
-<footer>
-
+<footer class="navbar navbar-inverse">
+  <div class="container">
+  <address class="navbar-text">
+    <strong>Canon Shop</strong><br>
+    68<sup>th</sup> floor, Bitexco Financial Tower<br>
+    District 1, Ho Chi Minh City, 700000<br>
+    <abbr title="Phone">P:</abbr> (+84) 3-840-1687<br>
+    <abbr title="Mobile">M:</abbr> (+84) 0989-366-421
+  </address>
+    <p class="navbar-text">
+      &copy; Copyright Canon Shop 2016.<br>
+      This website is not related to Canon Inc.<br>
+    </p>
+    <p class="navbar-text navbar-right">
+      Made with <span class="glyphicon glyphicon-heart"></span> by <a href="http://code.nhan.me" class="navbar-link" target="_blank">Nhan To-Doan</a>
+    </p>
+  </div>
 </footer>
 
 <script src="scripts/vendor.js"></script>

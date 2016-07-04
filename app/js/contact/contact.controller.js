@@ -7,7 +7,7 @@
     $scope.isNameValid =
     $scope.isEmailValid =
     $scope.isMsgValid = true;
-    $scope.contactSubmit = function(isValid, name, email, msg) {
+    $scope.contactSubmit = function(form, isValid, name, email, msg) {
       $scope.isSuccess = false;
       $scope.isNameValid =
       $scope.isEmailValid =
@@ -25,8 +25,14 @@
       } else {
         $scope.isNameValid =
         $scope.isEmailValid =
-        $scope.isMsgValid = true;
+        $scope.isMsgValid =
         $scope.isSuccess = true;
+        $scope.contact = {
+          name: "",
+          email: "",
+          phone: "",
+          message: ""
+        };
       }
     }
   };

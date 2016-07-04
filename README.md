@@ -13,6 +13,7 @@ Library | |
 [ngRoute](https://www.npmjs.com/package/angular-route) | 1.5.7
 [Bootstrap for Sass](https://www.npmjs.com/package/bootstrap-sass) | 3.3.6
 [jQuery](https://www.npmjs.com/package/jquery) | 2.2.4
+[slick](https://www.npmjs.com/package/slick-carousel) | 1.6.0
 
 #### Tools
 Tool | |

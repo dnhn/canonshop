@@ -1,12 +1,42 @@
-<div>{{text}}</div>
-<address>
-  <strong>Twitter, Inc.</strong><br>
-  1355 Market Street, Suite 900<br>
-  San Francisco, CA 94103<br>
-  <abbr title="Phone">P:</abbr> (123) 456-7890
-</address>
-
-<address>
-  <strong>Full Name</strong><br>
-  <a href="mailto:#">first.last@example.com</a>
-</address>
+<div class="page-header">
+  <h1>Contact Us</h1>
+</div>
+<div class="row">
+  <form class="col-md-6" method="post" name="contactForm" novalidate
+        ng-submit="contactSubmit(contactForm.$valid,
+                                 contactForm.name.$valid,
+                                 contactForm.email.$valid,
+                                 contactForm.message.$valid)">
+    <div class="alert alert-success" ng-show="isSuccess">
+      Thank you for contacting us, we will get in touch with you shortly.
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': !isNameValid }">
+      <label for="contactName">Your name</label>
+      <input id="contactName" name="name" class="form-control input-lg" type="text" required autofocus
+             ng-model="contact.name">
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': !isEmailValid }">
+      <label for="contactEmail">Your email</label>
+      <input id="contactEmail" name="email" class="form-control input-lg" type="email" required
+             ng-model="contact.email">
+    </div>
+    <div class="form-group">
+      <label for="contactPhone">Your phone number</label>
+      <input id="contactPhone" name="phone" class="form-control input-lg" type="number"
+             ng-model="contact.phone">
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': !isMsgValid }">
+      <label for="contactMessage">Your message</label>
+      <textarea id="contactMessage" name="message" class="form-control input-lg" rows="5" required
+                ng-model="contact.message"
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-default btn-lg">Send</button>
+  </form>
+  <address class="col-md-6">
+    <strong>Canon Shop</strong><br>
+    Level 68, Bitexco Financial Tower<br>
+    District 1, Ho Chi Minh City, 700000<br>
+    <abbr title="Phone">P:</abbr> (+84) 3-840-1687
+  </address>
+</div>

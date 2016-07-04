@@ -10,7 +10,6 @@ var gulp = require("gulp"),
     stream = require("vinyl-source-stream");
 
 var NPM = "node_modules/",
-    BOW = "bower_components/",
     sassOptions = {
       outputStyle: "compressed"
     },
@@ -41,6 +40,11 @@ gulp.task("styles", function() {
     }))
     .pipe(gulp.dest("styles"))
     .pipe(reload({ stream: true }));
+});
+
+gulp.task("fonts", function() {
+  gulp.src(NPM + "bootstrap-sass/assets/fonts/**/*.*")
+    .pipe(gulp.dest("fonts"));
 });
 
 gulp.task("scripts-lib", function() {
@@ -80,14 +84,14 @@ gulp.task("scripts-app", function() {
 });
 
 gulp.task("clean", function() {
-  del(["styles", "scripts"], { dryRun: false }) // dryRun for debug only, does not perform deletion
+  del(["styles", "fonts", "scripts"], { dryRun: false }) // dryRun for debug only, does not perform deletion
     .then(function(paths) {
       console.log("\nFiles deleted:\n");
       console.log(paths.join("\n"));
     });
 });
 
-gulp.task("serve", ["styles", "scripts-lib", "scripts-app"], function() {
+gulp.task("serve", ["styles", "fonts", "scripts-lib", "scripts-app"], function() {
   browserSync({
     notify: false,
     port: 9000,
@@ -104,8 +108,12 @@ gulp.task("serve", ["styles", "scripts-lib", "scripts-app"], function() {
   gulp.watch("app/**/*.js", ["scripts-app"]);
 });
 
+gulp.task("serve:prod", function() {
+
+});
+
 gulp.task("build", function() {
-  del(["styles", "scripts"], { dryRun: false }) // dryRun for debug only, does not perform deletion
+  del(["styles", "fonts", "scripts"], { dryRun: false }) // dryRun for debug only, does not perform deletion
     .then(function(paths) {
       console.log("\nFiles deleted:\n");
       console.log(paths.join("\n"), "\n");

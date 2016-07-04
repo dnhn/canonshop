@@ -19,11 +19,12 @@
     $timeout(function() {
       $(".slider").slick({
         autoplay: true,
-        cssEase: "ease-in",
+        cssEase: "ease-out",
         fade: true,
         arrows: false,
         pauseOnFocus: false,
-        pauseOnHover: false
+        pauseOnHover: false,
+        speed: 1000
       });
     }, 0);
 

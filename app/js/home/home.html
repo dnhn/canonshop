@@ -1,6 +1,13 @@
+<header>
+  <div class="slider">
+    <div class="slider-item" ng-repeat="item in content.slider"
+         ng-style="{ 'background-image': 'url(' + item + ')' }"></div>
+  </div>
+</header>
+
 <div class="jumbotron">
   <div class="container"></div>
-  <h1>{{message}}</h1>
-  <p>...</p>
-  <p><a class="btn btn-primary btn-lg" href="#/products" role="button">View our products</a></p>
+  <h1>{{content.jumbo.title}}</h1>
+  <p>{{content.jumbo.text}}</p>
+  <p><a class="btn btn-primary btn-lg" ng-href="{{content.jumbo.button.link}}" role="button">{{content.jumbo.button.title}}</a></p>
 </div>

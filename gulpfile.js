@@ -10,8 +10,9 @@ var gulp = require("gulp"),
     stream = require("vinyl-source-stream");
 
 var NPM = "node_modules/",
+    BOW = "bower_components/",
     sassOptions = {
-      outputStyle: "compress"
+      outputStyle: "compressed"
     },
     autoPrefixer = [
       "last 3 Chrome versions",
@@ -47,7 +48,8 @@ gulp.task("scripts-lib", function() {
     NPM + "jquery/dist/jquery.min.js",
     NPM + "angular/angular.min.js",
     NPM + "angular-route/angular-route.min.js",
-    NPM + "bootstrap-sass/assets/javascripts/bootstrap.min.js"
+    NPM + "bootstrap-sass/assets/javascripts/bootstrap.min.js",
+    NPM + "slick-carousel/slick/slick.min.js"
   ];
   gulp.src(src)
     .pipe($.concat("vendor.js"))

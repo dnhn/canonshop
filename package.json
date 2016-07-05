@@ -2,8 +2,14 @@
   "name": "canonshop",
   "version": "1.0.0",
   "description": "Canon Shop",
-  "main": "app/js/app.js",
-  "scripts": {},
+  "main": "server.js",
+  "engines": {
+    "node": "4.4.5"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "npm install -g gulp && gulp"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nhantdn/canonshop.git"
@@ -14,6 +20,9 @@
     "url": "https://github.com/nhantdn/canonshop/issues"
   },
   "homepage": "https://github.com/nhantdn/canonshop/README.md",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
   "devDependencies": {
     "angular": "^1.5.7",
     "angular-route": "^1.5.7",

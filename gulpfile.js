@@ -84,6 +84,10 @@ gulp.task("scripts-app", function() {
     .pipe(reload({ stream: true }));
 });
 
+gulp.task("lint", function() {
+
+});
+
 gulp.task("clean", function() {
   del(["styles", "fonts", "scripts"], { dryRun: false }) // dryRun for debug only, does not perform deletion
     .then(function(paths) {
@@ -110,7 +114,11 @@ gulp.task("serve", ["styles", "fonts", "scripts-lib", "scripts-app"], function()
 });
 
 gulp.task("serve:prod", function() {
-
+  browserSync({
+    notify: false,
+    port: 9100,
+    server: { baseDir: ["./"] }
+  });
 });
 
 gulp.task("build", function() {
@@ -118,7 +126,7 @@ gulp.task("build", function() {
     .then(function(paths) {
       console.log("\nFiles deleted:\n");
       console.log(paths.join("\n"), "\n");
-      gulp.start("styles", "scripts-lib", "scripts-app");
+      gulp.start("styles", "fonts", "scripts-lib", "scripts-app");
     });
 });
 

@@ -29,6 +29,7 @@ Tool | |
 [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) | 1.5.4
 [Browsersync](https://www.npmjs.com/package/browser-sync) | 2.13.0
 [Browserify](https://www.npmjs.com/package/browserify) | 13.0.1
+[Express](https://www.npmjs.com/package/express) | 4.14.0
 [del](https://www.npmjs.com/package/del) | 2.2.1
 [vinyl-buffer](https://www.npmjs.com/package/vinyl-buffer) | 1.0.0
 [vinyl-source-stream](https://www.npmjs.com/package/vinyl-source-stream) | 1.1.0

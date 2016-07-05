@@ -52,6 +52,7 @@ gulp.task("scripts-lib", function() {
     NPM + "jquery/dist/jquery.min.js",
     NPM + "angular/angular.min.js",
     NPM + "angular-route/angular-route.min.js",
+    NPM + "angular-sanitize/angular-sanitize.min.js",
     NPM + "bootstrap-sass/assets/javascripts/bootstrap.min.js",
     NPM + "slick-carousel/slick/slick.min.js"
   ];

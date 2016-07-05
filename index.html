@@ -2,19 +2,21 @@
 <html ng-app="canonshopApp" lang="en-GB">
 <head>
 <meta charset="UTF-8">
-<title>Canon Shop</title>
+<title ng-bind="pageTitle + ' &mdash; Canon Shop'"></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel="shortcut icon" href="c.svg">
 <!-- <base href="/"> -->
 
-<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet"> -->
 <link rel="stylesheet" href="styles/main.css">
+
 </head>
-<body>
+<body ng-controller="commonController">
 
 <nav class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -22,20 +24,18 @@
       </button>
       <a class="navbar-brand" ng-href="#/">Canon Shop</a>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a ng-href="#/">Home</a></li>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="nav navbar-nav" ng-cloak>
+        <li><a ng-href="#{{nav.home.url}}">{{nav.home.title}}</a></li>
         <li class="dropdown">
-          <a ng-href="#/products" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
+          <a ng-href="#{{nav.products.url}}" class="dropdown-toggle" data-toggle="dropdown">{{nav.products.title}} <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a ng-href="#/camera">Cameras</a></li>
-            <li><a ng-href="#/lens">Lenses</a></li>
-            <li><a ng-href="#/flash">Flashes</a></li>
+            <li ng-repeat="item in nav.products.dropdown"><a ng-href="#{{item.url}}">{{item.title}}</a></li>
             <li class="divider"></li>
-            <li><a ng-href="#/accessories">Accessories</a></li>
+            <li ng-repeat="item in nav.products.dropdown2"><a ng-href="#{{item.url}}">{{item.title}}</a></li>
           </ul>
         </li>
-        <li><a href="#/contact">Contact</a></li>
+        <li><a ng-href="#{{nav.contact.url}}">{{nav.contact.title}}</a></li>
       </ul>
     </div>
   </div>
@@ -45,20 +45,9 @@
 
 <footer class="navbar navbar-inverse">
   <div class="container">
-  <address class="navbar-text">
-    <strong>Canon Shop</strong><br>
-    68<sup>th</sup> floor, Bitexco Financial Tower<br>
-    District 1, Ho Chi Minh City, 700000<br>
-    <abbr title="Phone">P:</abbr> (+84) 3-840-1687<br>
-    <abbr title="Mobile">M:</abbr> (+84) 0989-366-421
-  </address>
-    <p class="navbar-text">
-      &copy; Copyright Canon Shop 2016.<br>
-      This website is not related to Canon Inc.<br>
-    </p>
-    <p class="navbar-text navbar-right">
-      Made with <span class="glyphicon glyphicon-heart"></span> by <a href="http://code.nhan.me" class="navbar-link" target="_blank">Nhan To-Doan</a>
-    </p>
+    <address class="navbar-text" ng-bind-html="footer.address"></address>
+    <p class="navbar-text" ng-bind-html="footer.copy"></p>
+    <p class="navbar-text navbar-right" ng-bind-html="footer.made"></p>
   </div>
 </footer>
 

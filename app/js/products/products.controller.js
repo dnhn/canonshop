@@ -1,7 +1,8 @@
 (function() {
   "use strict";
 
-  var productsController = function($scope) {
+  var productsController = function($rootScope, $scope) {
+    $rootScope.pageTitle = "Products";
     $scope.text = "Products page";
   };
 

@@ -42,3 +42,7 @@ footer.navbar {
   min-height: 300px;
   padding: 1em;
 }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

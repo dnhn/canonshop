@@ -1,7 +1,9 @@
 (function() {
   "use strict";
 
-  var homeController = function($scope, $timeout) {
+  var homeController = function($rootScope, $scope, $timeout) {
+    $rootScope.pageTitle = "Home";
+
     $scope.content = {
       "slider": [
         "https://images.unsplash.com/photo-1423935645335-eff327cd5d96?dpr=1&auto=format&crop=entropy&fit=crop&w=1000&h=400&q=50",

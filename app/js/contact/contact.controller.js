@@ -1,8 +1,10 @@
 (function() {
   "use strict";
 
-  var contactController = function($scope) {
+  var contactController = function($rootScope, $scope) {
+    $rootScope.pageTitle = "Contact Us";
     $scope.text = "Contact us";
+
     $scope.isSuccess = false;
     $scope.isNameValid =
     $scope.isEmailValid =

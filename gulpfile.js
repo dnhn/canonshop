@@ -130,7 +130,11 @@ gulp.task("serve", ["styles", "fonts", "scripts-lib", "scripts-app"], function()
 });
 
 gulp.task("serve:prod", function() {
-
+  browserSync({
+    notify: false,
+    port: 9100,
+    server: { baseDir: ["./"] }
+  });
 });
 
 gulp.task("build", ["lint"], function() {
@@ -138,7 +142,7 @@ gulp.task("build", ["lint"], function() {
     .then(function(paths) {
       console.log("\nFiles deleted:\n");
       console.log(paths.join("\n"), "\n");
-      gulp.start("styles", "scripts-lib", "scripts-app");
+      gulp.start("styles", "fonts", "scripts-lib", "scripts-app");
     });
 });
 

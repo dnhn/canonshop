@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 "use strict";
 
 var gulp = require("gulp"),
@@ -84,6 +86,24 @@ gulp.task("scripts-app", function() {
     .pipe(reload({ stream: true }));
 });
 
+gulp.task("lint", function() {
+  return gulp.src("app/js/**/*.js")
+    .pipe($.eslint())
+    .pipe($.eslint.result(function(result) {
+      if(result.errorCount > 0) {
+        console.log(result.filePath);
+        console.log("Errors:", result.errorCount, "Warnings:", result.warningCount);
+        console.log("Results:", result.messages, "\n");
+      }
+    }))
+    .pipe($.eslint.results(function(results) {
+      console.log("Total files:", results.length);
+      console.log("Error:", results.errorCount,
+                  "Warning:", results.warningCount);
+    }))
+    .pipe($.eslint.failAfterError());
+});
+
 gulp.task("clean", function() {
   del(["styles", "fonts", "scripts"], { dryRun: false }) // dryRun for debug only, does not perform deletion
     .then(function(paths) {
@@ -113,7 +133,7 @@ gulp.task("serve:prod", function() {
 
 });
 
-gulp.task("build", function() {
+gulp.task("build", ["lint"], function() {
   del(["styles", "fonts", "scripts"], { dryRun: false }) // dryRun for debug only, does not perform deletion
     .then(function(paths) {
       console.log("\nFiles deleted:\n");
@@ -125,3 +145,5 @@ gulp.task("build", function() {
 gulp.task("default", function() {
   gulp.start("build");
 });
+
+/* eslint-enable */

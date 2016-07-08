@@ -19,6 +19,7 @@
         if(!email) $scope.isEmailValid = false;
         if(!msg) $scope.isMsgValid = false;
       } else {
+        console.log($scope.contact);
         $scope.isNameValid =
         $scope.isEmailValid =
         $scope.isMsgValid =

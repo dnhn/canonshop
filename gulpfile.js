@@ -13,20 +13,7 @@ var NPM = "node_modules/",
     sassOptions = {
       outputStyle: "compressed"
     },
-    autoPrefixer = [
-      "last 3 Chrome versions",
-      "last 2 Firefox versions",
-      "last 2 Safari versions",
-      "last 2 Edge versions",
-      "ie >= 9",
-      "last 3 ChromeAndroid versions",
-      "last 3 Android versions",
-      "last 3 FirefoxAndroid versions",
-      "last 3 iOS versions",
-      "last 2 ExplorerMobile versions",
-      "last 2 ExplorerMobile versions",
-      "last 2 OperaMobile versions"
-    ];
+    autoPrefixer = ["last 3 versions", "IE >= 9"];
 
 gulp.task("styles", function() {
   return gulp.src("app/css/main.scss")

@@ -38,10 +38,13 @@ Tool | |
 Gulp task | |
 --- | ---
 `styles`| Build stylesheets
+`fonts` | Copy fonts to working directory
 `scripts-lib`| Build libraries
 `scripts-app`| Build Angular app code
+`lint` | Analyse JavaScript source code
 `clean`| Clean built folders and files
 `serve`| Start a webserver, watch for file changes then auto-reload
+`serve:prod` | Browse static site (no reload - same as `npm start`)
 `build`| Build all
 
 [![Constructocat](https://octodex.github.com/images/constructocat2.jpg)](https://octodex.github.com)

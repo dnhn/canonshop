@@ -15,15 +15,9 @@
       $scope.isEmailValid =
       $scope.isMsgValid = true;
       if(!isValid) {
-        if(!name) {
-          $scope.isNameValid = false;
-        }
-        if(!email) {
-          $scope.isEmailValid = false;
-        }
-        if(!msg) {
-          $scope.isMsgValid = false;
-        }
+        if(!name) $scope.isNameValid = false;
+        if(!email) $scope.isEmailValid = false;
+        if(!msg) $scope.isMsgValid = false;
       } else {
         $scope.isNameValid =
         $scope.isEmailValid =
@@ -36,7 +30,7 @@
           message: ""
         };
       }
-    }
+    };
   };
 
   module.exports = {

@@ -32,11 +32,11 @@
           "made": "Made with <span class='glyphicon glyphicon-heart'></span> by <a href='http://code.nhan.me' class='navbar-link' target='_blank'>Nhan To-Doan</a>"
         }
       };
-    };
+    }
 
     return {
       getSiteData: getSiteData
-    }
+    };
   };
 
   module.exports = {

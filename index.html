@@ -5,7 +5,7 @@
 <title ng-bind="pageTitle + ' &mdash; Canon Shop'"></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <link rel="shortcut icon" href="c.svg">
-<!-- <base href="/"> -->
+<base href="/">
 
 <!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet"> -->
 <link rel="stylesheet" href="styles/main.css">
@@ -22,20 +22,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" ng-href="#/">Canon Shop</a>
+      <a class="navbar-brand" ng-href="/">Canon Shop</a>
     </div>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="nav navbar-nav" ng-cloak>
-        <li><a ng-href="#{{nav.home.url}}">{{nav.home.title}}</a></li>
+        <li><a ng-href="{{nav.home.url}}">{{nav.home.title}}</a></li>
         <li class="dropdown">
-          <a ng-href="#{{nav.products.url}}" class="dropdown-toggle" data-toggle="dropdown">{{nav.products.title}} <span class="caret"></span></a>
+          <a ng-href="{{nav.products.url}}" class="dropdown-toggle" data-toggle="dropdown">{{nav.products.title}} <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li ng-repeat="item in nav.products.dropdown"><a ng-href="#{{item.url}}">{{item.title}}</a></li>
+            <li ng-repeat="item in nav.products.dropdown"><a ng-href="{{item.url}}">{{item.title}}</a></li>
             <li class="divider"></li>
-            <li ng-repeat="item in nav.products.dropdown2"><a ng-href="#{{item.url}}">{{item.title}}</a></li>
+            <li ng-repeat="item in nav.products.dropdown2"><a ng-href="{{item.url}}">{{item.title}}</a></li>
           </ul>
         </li>
-        <li><a ng-href="#{{nav.contact.url}}">{{nav.contact.title}}</a></li>
+        <li><a ng-href="{{nav.contact.url}}">{{nav.contact.title}}</a></li>
       </ul>
     </div>
   </div>

@@ -1,14 +1,22 @@
-var express = require('express');
-var app = express();
+var express = require("express"),
+    app = express(),
+    compression = require("compression"),
+    helmet = require("helmet");
 
-app.set('port', (process.env.PORT || 5000));
+// change to 'production' before deployment
+// app.set("env", "development");
 
-app.use(express.static(__dirname + '/'));
+app.set("port", (process.env.PORT || 5000));
+app.use(compression()); // gzip
+app.use(helmet()); // security
 
-app.get('/', function(request, response) {
-  response.render('/');
+app.use(express.static(__dirname + "/"));
+
+app.get("/*", function(req, res) {
+  console.log(req.ip + ":", req.hostname + req.originalUrl);
+  res.sendFile("index.html", { root: __dirname });
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+app.listen(app.get("port"), function() {
+  console.log("App is running on port", app.get("port"));
 });
